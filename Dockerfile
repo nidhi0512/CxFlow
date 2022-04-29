@@ -29,6 +29,3 @@ RUN apk add openjdk8=8.302.08-r2 --repository=https://dl-cdn.alpinelinux.org/alp
 COPY build/libs/cxgo/*.jar cx-flow.jar
 ENTRYPOINT ["java", "-Xms512m", "-Xmx2048m", "-Djava.security.egd=file:/dev/./urandom", "-Dspring.profiles.active=cxgo", "-jar", "cx-flow.jar"]
 EXPOSE 8080
-
-
-
